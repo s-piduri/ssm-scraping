@@ -1,0 +1,14 @@
+[More specific] Instructions for setting up Docker and RSelenium:
+
+1. Make sure VT-x is turned on in System BIOS
+2. Install Docker Desktop
+3. Add user to docker-users in "local users and groups"
+    - to do this, open terminal as an administrator
+    - net localgroup "docker-users" "<MemberName>" /add
+4. Download and install RSelenium in R: install.packages('RSelenium', repos='https://cran.r-project.org')
+5. Run in Powershell: docker pull selenium/standalone-firefox:2.53.0
+6. Make sure Rtools is installed
+   - add Rtools to path within R - for some reason, if this isn't done, the code doesn't work
+   - run in R: writeLines('PATH="${RTOOLS40_HOME}\\usr\\bin;${PATH}"', con = "~/.Renviron")
+   - restart computer so changes can take effect
+7. 
