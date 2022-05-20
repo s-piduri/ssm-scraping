@@ -5,6 +5,7 @@
 3. Add user to docker-users in "local users and groups"
     - to do this, open terminal as an administrator
     - net localgroup "docker-users" "<MemberName>" /add
+    - or run lusrmgr.msc using Run command to pull up local users and group edit 
 4. Download and install RSelenium in R: install.packages('RSelenium', repos='https://cran.r-project.org')
 5. Run in Powershell: docker pull selenium/standalone-firefox:2.53.0
 6. Make sure Rtools is installed
