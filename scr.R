@@ -1,13 +1,17 @@
 library(RSelenium)
 
 ####run this in docker via powershell
+### make sure that the destination folder is set here "~/Downloads/Selenium-Downloads/"; create a folder with this name in this path.
 #docker run -d -v ~/Downloads/Selenium-Downloads/://home/seluser/Downloads -p 4445:4444 -p 5901:5900 selenium/standalone-firefox:2.53.0
+
 
 # Firefox profile
 fprof <- makeFirefoxProfile(list(browser.download.dir='/home/seluser/Downloads',
                                  browser.download.folderList=2L,
                                  browser.download.manager.showWhenStarting=FALSE,
                                  browser.helperApps.neverAsk.saveToDisk='text/csv;application/vnd.ms-excel;application/zip' 
+
+                                 
                                  # This says if a CSV/XLS/XLSX/ZIP is encountered, then download file automatically into default download folder
                                  # See MIME Types here: https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
 ))
